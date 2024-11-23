@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de Sesión - Curso de Astronomía</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilo global para el fondo */
+        body {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Contenedor del formulario de login */
+        .login-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 350px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #2a5298;
+            margin-bottom: 30px;
+        }
+
+        /* Estilo para los campos de texto */
+        input[type="text"], input[type="password"] {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            font-size: 1em;
+        }
+
+        input[type="text"]:focus, input[type="password"]:focus {
+            border-color: #2a5298;
+            outline: none;
+        }
+
+        /* Estilo para el botón */
+        .btn-login {
+            background-color: #ffb703;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.2em;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-login:hover {
+            background-color: #e94560;
+        }
+
+        /* Estilo para mensaje de error */
+        .error-message {
+            color: #e94560;
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+
+        /* Estilo para el pie de página */
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: white;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Contenedor principal de inicio de sesión -->
+    <div class="login-container">
+        <h1>Iniciar Sesión</h1>
+        
+        <!-- Mensaje de error (si es necesario) -->
+        <div class="error-message" id="error-message" style="display: none;">Usuario o contraseña incorrectos. Inténtalo de nuevo.</div>
+
+        <!-- Formulario de inicio de sesión -->
+        <form action="astronomia.html" method="post" onsubmit="return validateForm()">
+            <input type="text" id="username" name="username" placeholder="Usuario" required>
+            <input type="password" id="password" name="password" placeholder="Contraseña" required>
+            <button type="submit" class="btn-login">Ingresar</button>
+        </form>
+        
+        <!-- Pie de página -->
+        <div class="footer">
+            <p>&copy; 2024 Curso de Astronomía | Todos los derechos reservados</p>
+        </div>
+    </div>
+
+    <script>
+        // Función para validar el formulario
+        function validateForm() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+            var errorMessage = document.getElementById('error-message');
+
+            // Usuario y contraseña predeterminados
+            if (username === 'alumno' && password === '2024') {
+                return true; // Redirige al curso de astronomía
+            } else {
+                errorMessage.style.display = 'block'; // Muestra el mensaje de error
+                return false; // No permite el envío del formulario
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen de Astronomía</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Estilo general de la página */
+        body {
+            background: linear-gradient(to right, #1e3c72, #2a5298);
+            color: white;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Contenedor principal del examen */
+        .exam-container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 800px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #ffb703;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            color: #ffb703;
+            font-size: 1.8em;
+        }
+
+        /* Estilo de las preguntas */
+        .question {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .question p {
+            font-size: 1.2em;
+        }
+
+        .answer-options {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        /* Estilo para las respuestas (checkbox y radio buttons) */
+        .answer-options input[type="radio"],
+        .answer-options input[type="checkbox"] {
+            margin-right: 10px;
+            transform: scale(1.2);
+        }
+
+        /* Estilo para el botón de enviar */
+        .btn-submit {
+            background-color: #ffb703;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.4em;
+            cursor: pointer;
+            width: 100%;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #e94560;
+            transform: scale(1.05);
+        }
+
+        /* Estilo para los resultados */
+        .result {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+            font-size: 1.5em;
+            text-align: center;
+        }
+
+        /* Pie de página */
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Contenedor del examen -->
+    <div class="exam-container">
+        <h1>Examen de Astronomía</h1>
+
+        <!-- Pregunta 1 -->
+        <div class="question">
+            <p>1. ¿Cuál es el planeta más grande del Sistema Solar?</p>
+            <div class="answer-options">
+                <label>
+                    <input type="radio" name="question1" value="a"> Marte
+                </label><br>
+                <label>
+                    <input type="radio" name="question1" value="b"> Júpiter
+                </label><br>
+                <label>
+                    <input type="radio" name="question1" value="c"> Saturno
+                </label><br>
+                <label>
+                    <input type="radio" name="question1" value="d"> Venus
+                </label>
+            </div>
+        </div>
+
+        <!-- Pregunta 2 -->
+        <div class="question">
+            <p>2. ¿Qué es un agujero negro?</p>
+            <div class="answer-options">
+                <label>
+                    <input type="radio" name="question2" value="a"> Un cuerpo celeste con alta densidad y gravedad extrema.
+                </label><br>
+                <label>
+                    <input type="radio" name="question2" value="b"> Una estrella en proceso de formación.
+                </label><br>
+                <label>
+                    <input type="radio" name="question2" value="c"> Un satélite natural.
+                </label><br>
+                <label>
+                    <input type="radio" name="question2" value="d"> Un planeta enano.
+                </label>
+            </div>
+        </div>
+
+        <!-- Pregunta 3 -->
+        <div class="question">
+            <p>3. ¿Cuál es la estrella más cercana a la Tierra?</p>
+            <div class="answer-options">
+                <label>
+                    <input type="radio" name="question3" value="a"> Alfa Centauri
+                </label><br>
+                <label>
+                    <input type="radio" name="question3" value="b"> El Sol
+                </label><br>
+                <label>
+                    <input type="radio" name="question3" value="c"> Betelgeuse
+                </label><br>
+                <label>
+                    <input type="radio" name="question3" value="d"> Proxima Centauri
+                </label>
+            </div>
+        </div>
+
+        <!-- Pregunta 4 -->
+        <div class="question">
+            <p>4. ¿Qué es la Vía Láctea?</p>
+            <div class="answer-options">
+                <label>
+                    <input type="radio" name="question4" value="a"> Una constelación
+                </label><br>
+                <label>
+                    <input type="radio" name="question4" value="b"> Un planeta
+                </label><br>
+                <label>
+                    <input type="radio" name="question4" value="c"> Una galaxia
+                </label><br>
+                <label>
+                    <input type="radio" name="question4" value="d"> Un cometa
+                </label>
+            </div>
+        </div>
+
+        <!-- Pregunta 5 -->
+        <div class="question">
+            <p>5. ¿Qué instrumento se utiliza para observar objetos celestes lejanos?</p>
+            <div class="answer-options">
+                <label>
+                    <input type="radio" name="question5" value="a"> Microscopio
+                </label><br>
+                <label>
+                    <input type="radio" name="question5" value="b"> Telescopio
+                </label><br>
+                <label>
+                    <input type="radio" name="question5" value="c"> Cámara fotográfica
+                </label><br>
+                <label>
+                    <input type="radio" name="question5" value="d"> Radiotelescopio
+                </label>
+            </div>
+        </div>
+
+        <!-- Botón para enviar el examen -->
+        <button class="btn-submit" onclick="calculateResults()">Enviar Examen</button>
+
+        <!-- Resultados -->
+        <div id="result" class="result" style="display: none;"></div>
+
+        <!-- Pie de página -->
+        <div class="footer">
+            <p>&copy; 2024 Curso de Astronomía | Todos los derechos reservados</p>
+        </div>
+    </div>
+
+    <script>
+        function calculateResults() {
+            let score = 0;
+            let totalQuestions = 5;
+
+            // Respuestas correctas para las preguntas
+            let correctAnswers = {
+                "question1": "b",  // Júpiter
+                "question2": "a",  // Cuerpo celeste denso
+                "question3": "b",  // El Sol
+                "question4": "c",  // Una galaxia
+                "question5": "b",  // Telescopio
+            };
+
+            // Comprobamos las respuestas
+            for (let i = 1; i <= totalQuestions; i++) {
+                let selectedAnswer = document.querySelector(`input[name="question${i}"]:checked`);
+                if (selectedAnswer && selectedAnswer.value === correctAnswers[`question${i}`]) {
+                    score++;
+                }
+            }
+
+            // Mostrar resultados
+            let resultDiv = document.getElementById('result');
+            resultDiv.style.display = 'block';
+            resultDiv.innerHTML = `Tu puntuación es ${score} de ${totalQuestions}.`;
+
+            // Opcional: mensaje basado en la puntuación
+            if (score === totalQuestions) {
+                resultDiv.innerHTML += "<br>¡Excelente! Has respondido todo correctamente.";
+            } else if (score >= 3) {
+                resultDiv.innerHTML += "<br>¡Buen trabajo! Has acertado la mayoría de las preguntas.";
+            } else {
+                resultDiv.innerHTML += "<br>Te recomendamos repasar los temas y volver a intentarlo.";
+            }
+        }
+    </script>
+
+</body>
+</html>
